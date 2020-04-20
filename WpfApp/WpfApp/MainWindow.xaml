@@ -1,0 +1,46 @@
+﻿<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="IsButik" Height="450" Width="800">
+    <Grid>
+        <!--#region Grid difinitions -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <!--#endregion-->
+        
+        <!--#region Lables -->
+        <Label Grid.Column="0" Grid.Row="0" Content="Oversigt over bestilling" Style="{StaticResource Lb}"/>
+        <Label Grid.Column="3" Grid.Row="0" Content="Typer af is" Style="{StaticResource Lb}"/>
+        <Label Grid.Column="4" Grid.Row="0" Content="Pris pr. is " Style="{StaticResource Lb}"/>
+        <!--#endregion-->
+        
+        <!--#region ListBox -->
+        <ListBox Grid.Column="3" Grid.Row="1" Grid.RowSpan="3" x:Name="LbxIceType" Style="{StaticResource Lbx}"/>
+        <ListBox Grid.Column="4" Grid.Row="1" Grid.RowSpan="3" x:Name="LbxIcePrice" Style="{StaticResource Lbx}"/>
+        <!--#endregion-->
+       
+        <DataGrid Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="5" x:Name="DtgIceInfo" Style="{StaticResource Dtg}"/>
+       
+        <StackPanel Grid.Column="3" Grid.Row="4">
+            <Button x:Name="BtnAddIce" Content="Tilføj Bestilling " Style="{StaticResource Btn}"/>
+            <Button x:Name="BtnRemoveIce" Content="Slet Bestilling" Style="{StaticResource Btn}"/>
+        </StackPanel>
+    </Grid>
+</Window>
