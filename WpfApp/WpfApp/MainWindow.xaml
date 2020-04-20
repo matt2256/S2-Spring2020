@@ -42,5 +42,7 @@
             <Button x:Name="BtnAddIce" Content="Tilføj Bestilling " Style="{StaticResource Btn}"/>
             <Button x:Name="BtnRemoveIce" Content="Slet Bestilling" Style="{StaticResource Btn}"/>
         </StackPanel>
+
+        
     </Grid>
 </Window>
