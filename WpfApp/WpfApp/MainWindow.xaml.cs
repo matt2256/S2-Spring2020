@@ -24,24 +24,43 @@ namespace WpfApp
     public partial class MainWindow : Window
     {
         #region Fields
-        int antalIs = 100;
+        //int magnum = 30;
+        int money = 100;
         #endregion
-
-
-        
-       
 
         public MainWindow()
         {
             InitializeComponent();
 
-            
+            AntalIs();
             DataContext = this;
         }
 
+        public void Pung()
+        {
+            if ()
+            {
+                money -= 10;
+                LbPung.Content = money;
+            }
+        }
+
+
+        public void AntalIs()
+        {
+            LbMagnum.Content = 30;
+            LbAstronaut.Content = 30;
+            LbKøbenhavnerstang.Content = 30;
+            LbTwiser.Content = 30;
+            LbFilur.Content = 30;
+            LbKungFu.Content = 30;
+        }
+
+        #region Buttons
+
         private void BtnMagnum_Click(object sender, RoutedEventArgs e)
         {
-            LbxInfo.Items.Clear();
+
             LbxInfo.Items.Add("Dette er en Magnum");
             LbxKøbsInfo.Items.Add("1x Magnum");
         }
@@ -80,6 +99,8 @@ namespace WpfApp
             LbxInfo.Items.Add("Dette er en Kung Fu");
             LbxKøbsInfo.Items.Add("1x Kung Fu");
         }
+        #endregion
+
     }
 
 

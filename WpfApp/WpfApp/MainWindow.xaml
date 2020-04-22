@@ -28,7 +28,7 @@
         <!--#endregion-->
         
         <!--#region Buttons -->
-        <StackPanel Grid.Column="1" Grid.Row="2" Grid.RowSpan="3">
+        <StackPanel Grid.Column="2" Grid.Row="2" Grid.RowSpan="3">
             <Button Height="25" x:Name="BtnMagnum" Content="Magnum" Style="{StaticResource Btn}" Click="BtnMagnum_Click"/>
             <Button Height="25" x:Name="BtnAstronaunt" Content="Aatronaut" Style="{StaticResource Btn}" Click="BtnAstronaunt_Click"/>
             <Button Height="25" x:Name="BtnKøbenhavnerstang" Content="Københavnerstang" Style="{StaticResource Btn}" Click="BtnKøbenhavnerstang_Click"/>
@@ -42,6 +42,19 @@
         <ListBox Grid.Column="3" Grid.Row="2" Grid.RowSpan="3" x:Name="LbxInfo"/>
         <ListBox Grid.Column="5" Grid.Row="2" Grid.RowSpan="3" x:Name="LbxKøbsInfo"/>
         <!--#endregion-->
+
+        <!--#region Label for antal is -->
+        <StackPanel Grid.Column="1" Grid.Row="2" Grid.RowSpan="3">
+            <Label Height="30" x:Name="LbMagnum" Style="{StaticResource Lb}"/>
+            <Label Height="30" x:Name="LbAstronaut" Style="{StaticResource Lb}"/>
+            <Label Height="30" x:Name="LbKøbenhavnerstang" Style="{StaticResource Lb}"/>
+            <Label Height="30" x:Name="LbTwiser" Style="{StaticResource Lb}"/>
+            <Label Height="30" x:Name="LbFilur" Style="{StaticResource Lb}"/>
+            <Label Height="30" x:Name="LbKungFu" Style="{StaticResource Lb}"/>
+        </StackPanel>
+        <!--#endregion-->
+
+        <Label Grid.Column="2" Grid.Row="5" x:Name="LbPung" Style="{StaticResource Lb}"/>
 
     </Grid>
 </Window>
