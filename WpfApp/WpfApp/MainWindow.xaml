@@ -5,56 +5,75 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
-        Title="IsButik" Height="450" Width="800">
-    <Grid>
-        <!--#region Grid difinitions -->
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="40"/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <!--#endregion-->
-        
-        <!--#region Buttons -->
-        <StackPanel Grid.Column="2" Grid.Row="2" Grid.RowSpan="3">
-            <Button Height="25" x:Name="BtnMagnum" Content="Magnum" Style="{StaticResource Btn}" Click="BtnMagnum_Click"/>
-            <Button Height="25" x:Name="BtnAstronaunt" Content="Aatronaut" Style="{StaticResource Btn}" Click="BtnAstronaunt_Click"/>
-            <Button Height="25" x:Name="BtnKøbenhavnerstang" Content="Københavnerstang" Style="{StaticResource Btn}" Click="BtnKøbenhavnerstang_Click"/>
-            <Button Height="25" x:Name="BtnTwister" Content="Twister" Style="{StaticResource Btn}" Click="BtnTwister_Click"/>
-            <Button Height="25" x:Name="BtnFilur" Content="Filur" Style="{StaticResource Btn}" Click="BtnFilur_Click"/>
-            <Button Height="25" x:Name="BtnKungFu" Content="Kung fu" Style="{StaticResource Btn}" Click="BtnKungFu_Click"/>
-        </StackPanel>
+        Title="IsButik" Height="426" Width="668">
+    <Grid Margin="0,0,2,0">
+
+
+        <ListBox x:Name="LbxInformation" HorizontalAlignment="Left" Height="242" Margin="280,142,0,0" VerticalAlignment="Top" Width="181"/>
+        <!--#region Payment -->
+        <Button x:Name="BtnMoneyLeft" Content="5£" HorizontalAlignment="Left" Margin="10,249,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="BtnMoneyCenter" Content="10£" HorizontalAlignment="Left" Margin="90,249,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="0.526,-3.55"/>
+        <Button x:Name="BtnMoneyRight" Content="20£" HorizontalAlignment="Left" Margin="171,249,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBlock x:Name="TbInserted" HorizontalAlignment="Left" Margin="10,274,0,0" TextWrapping="Wrap" Text="Insert: 0£" VerticalAlignment="Top" RenderTransformOrigin="0.917,-4.5"/>
+        <TextBlock x:Name="TbChanged" HorizontalAlignment="Left" Margin="10,294,0,0" TextWrapping="Wrap" Text="Change: 0£" VerticalAlignment="Top"/>
         <!--#endregion-->
 
-        <!--#region ListBox -->
-        <ListBox Grid.Column="3" Grid.Row="2" Grid.RowSpan="3" x:Name="LbxInfo"/>
-        <ListBox Grid.Column="5" Grid.Row="2" Grid.RowSpan="3" x:Name="LbxKøbsInfo"/>
+        <!--#region Checkout -->
+        <ListView x:Name="LvCheckout" HorizontalAlignment="Left" Height="242" Margin="484,142,0,0" VerticalAlignment="Top" Width="164">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <DockPanel>
+                        <Button DockPanel.Dock="Left">
+                            Køb
+                        </Button>
+                        <StackPanel DockPanel.Dock="Right">
+                            <TextBlock>
+                                Title here
+                            </TextBlock>
+                            <TextBlock>
+                                Price Here
+                            </TextBlock>
+                            <TextBlock Visibility="Hidden">
+                                Out Of Stock
+                            </TextBlock>
+                        </StackPanel>
+                    </DockPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
         <!--#endregion-->
 
-        <!--#region Label for antal is -->
-        <StackPanel Grid.Column="1" Grid.Row="2" Grid.RowSpan="3">
-            <Label Height="30" x:Name="LbMagnum" Style="{StaticResource Lb}"/>
-            <Label Height="30" x:Name="LbAstronaut" Style="{StaticResource Lb}"/>
-            <Label Height="30" x:Name="LbKøbenhavnerstang" Style="{StaticResource Lb}"/>
-            <Label Height="30" x:Name="LbTwiser" Style="{StaticResource Lb}"/>
-            <Label Height="30" x:Name="LbFilur" Style="{StaticResource Lb}"/>
-            <Label Height="30" x:Name="LbKungFu" Style="{StaticResource Lb}"/>
-        </StackPanel>
+        <!--#region Inventory -->
+        <DockPanel HorizontalAlignment="Left" Height="96" LastChildFill="False" Margin="10,137,0,0" VerticalAlignment="Top" Width="236">
+            <StackPanel DockPanel.Dock="Top">
+                <TextBlock>
+                    Filur: 10
+                </TextBlock>
+                <TextBlock>
+                    Twister: 15
+                </TextBlock>
+                <TextBlock>
+                    Københavnerstang: 5
+                </TextBlock>
+                <TextBlock>
+                    Magnum: 20
+                </TextBlock>
+            </StackPanel>
+        </DockPanel>
         <!--#endregion-->
 
-        <Label Grid.Column="2" Grid.Row="5" x:Name="LbPung" Style="{StaticResource Lb}"/>
+        <!--#region Labels -->
+        <Label x:Name="LbInventory" Content="Inventory" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" Height="49" Width="236" FontSize="30"/>
+        <Label x:Name="LbInformation" Content="Information" HorizontalAlignment="Left" Margin="280,88,0,0" VerticalAlignment="Top" Height="49" Width="181" FontSize="30"/>
+        <Label x:Name="LbHeader" Content="Nielsens Isbutik" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.171,0.288" Height="78" Width="772" FontSize="40"/>
+        <Label x:Name="LbCheckout" Content="Checkout" HorizontalAlignment="Left" Margin="484,93,0,0" VerticalAlignment="Top" Height="44" Width="164" FontSize="30"/>
+        <!--#endregion-->
+
+        <!--#region Mangement -->
+        <Button x:Name="BtnRefil" Content="Fyld op" HorizontalAlignment="Left" Margin="10,336,0,0" VerticalAlignment="Top" Width="75" Height="48"/>
+        <Button x:Name="BtnEmpty" Content="Tøm" HorizontalAlignment="Left" Margin="90,336,0,0" VerticalAlignment="Top" Width="76" Height="48"/>
+        <Button x:Name="Withdraw" Content="Hæv Penge" HorizontalAlignment="Left" Margin="171,336,0,0" VerticalAlignment="Top" Width="75" Height="48"/>
+        <!--#endregion-->
 
     </Grid>
 </Window>
