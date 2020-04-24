@@ -36,7 +36,7 @@ namespace WpfApp.ViewModels
                 if (requestedItem.Dispense())
                 {
                     Bank.Pay();
-                    Console.WriteLine("Nyd de køb");
+                    Console.WriteLine("Nyd dit køb");
                 }
             }
         }
