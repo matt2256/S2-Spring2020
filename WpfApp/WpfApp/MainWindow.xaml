@@ -11,24 +11,27 @@
 
         <ListBox x:Name="LbxInformation" HorizontalAlignment="Left" Height="242" Margin="280,142,0,0" VerticalAlignment="Top" Width="181"/>
         <!--#region Payment -->
-        <Button x:Name="BtnMoneyLeft" Content="5£" HorizontalAlignment="Left" Margin="10,249,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="BtnMoneyCenter" Content="10£" HorizontalAlignment="Left" Margin="90,249,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="0.526,-3.55"/>
-        <Button x:Name="BtnMoneyRight" Content="20£" HorizontalAlignment="Left" Margin="171,249,0,0" VerticalAlignment="Top" Width="75"/>
-        <TextBlock x:Name="TbInserted" HorizontalAlignment="Left" Margin="10,274,0,0" TextWrapping="Wrap" Text="Insert: 0£" VerticalAlignment="Top" RenderTransformOrigin="0.917,-4.5"/>
-        <TextBlock x:Name="TbChanged" HorizontalAlignment="Left" Margin="10,294,0,0" TextWrapping="Wrap" Text="Change: 0£" VerticalAlignment="Top"/>
-        <!--#endregion-->
+        <!--Buttons-->
+        <Button x:Name="BtnMoneyLeft" Content="5£" HorizontalAlignment="Left" Margin="10,249,0,0" VerticalAlignment="Top" Width="75" Click="BtnMoneyLeft_Click"/>
+        <Button x:Name="BtnMoneyCenter" Content="10£" HorizontalAlignment="Left" Margin="90,249,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="0.526,-3.55" Click="BtnMoneyCenter_Click"/>
+        <Button x:Name="BtnMoneyRight" Content="20£" HorizontalAlignment="Left" Margin="171,249,0,0" VerticalAlignment="Top" Width="75" Click="BtnMoneyRight_Click"/>
 
+        <!--Textblock-->
+        <TextBlock x:Name="TbInserted" HorizontalAlignment="Left" Margin="10,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.917,-4.5" Text="{Binding Bank.Inserted, StringFormat=Inserted £{0:0.00}}"/>
+        <TextBlock x:Name="TbChanged" HorizontalAlignment="Left" Margin="10,294,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding Bank.Change, StringFormat=Change £{0:0.00}}"/>
+        <!--#endregion-->
+        
         <!--#region Checkout -->
         <ListView x:Name="LvCheckout" HorizontalAlignment="Left" Height="242" Margin="484,142,0,0" VerticalAlignment="Top" Width="164" ItemsSource="{Binding items}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <DockPanel>
-                        <Button DockPanel.Dock="Left">
+                        <Button x:Name="Purchase" DockPanel.Dock="Left" Click="Purchase_Click" DataContext="{Binding}">
                             Køb
                         </Button>
                         <StackPanel DockPanel.Dock="Right">
-                            <TextBlock Text="{Binding information.name}"/>
-                            <TextBlock Text="{Binding information.price, StringFormat=£{0:0.00}}"/>
+                            <TextBlock Text="{Binding information.Name}"/>
+                            <TextBlock Text="{Binding information.Price, StringFormat=£{0:0.00}}"/>
                             <TextBlock Visibility="{Binding OutOfStockMessage}" />
                         </StackPanel>
                     </DockPanel>
@@ -39,19 +42,12 @@
 
         <!--#region Inventory -->
         <DockPanel HorizontalAlignment="Left" Height="96" LastChildFill="False" Margin="10,137,0,0" VerticalAlignment="Top" Width="236">
-            <StackPanel DockPanel.Dock="Top">
-                <TextBlock>
-                    Filur: 10
-                </TextBlock>
-                <TextBlock>
-                    Twister: 15
-                </TextBlock>
-                <TextBlock>
-                    Københavnerstang: 5
-                </TextBlock>
-                <TextBlock>
-                    Magnum: 20
-                </TextBlock>
+            <TextBlock DockPanel.Dock="Top" Text="{Binding Bank.BankTotal, StringFormat=Earnings £{0:0.00}}"/>
+            <StackPanel DockPanel.Dock="Bottom">
+                <TextBlock Text="{Binding items[0].InventoryDisplay}"/>
+                <TextBlock Text="{Binding items[1].InventoryDisplay}"/>
+                <TextBlock Text="{Binding items[2].InventoryDisplay}"/>
+                <TextBlock Text="{Binding items[3].InventoryDisplay}"/>
             </StackPanel>
         </DockPanel>
         <!--#endregion-->
@@ -64,9 +60,9 @@
         <!--#endregion-->
 
         <!--#region Mangement -->
-        <Button x:Name="BtnRefil" Content="Fyld op" HorizontalAlignment="Left" Margin="10,336,0,0" VerticalAlignment="Top" Width="75" Height="48"/>
-        <Button x:Name="BtnEmpty" Content="Tøm" HorizontalAlignment="Left" Margin="90,336,0,0" VerticalAlignment="Top" Width="76" Height="48"/>
-        <Button x:Name="Withdraw" Content="Hæv Penge" HorizontalAlignment="Left" Margin="171,336,0,0" VerticalAlignment="Top" Width="75" Height="48"/>
+        <Button x:Name="BtnRefil" Content="Fyld op" HorizontalAlignment="Left" Margin="10,336,0,0" VerticalAlignment="Top" Width="75" Height="48" Click="BtnRefil_Click"/>
+        <Button x:Name="BtnEmpty" Content="Tøm" HorizontalAlignment="Left" Margin="90,336,0,0" VerticalAlignment="Top" Width="76" Height="48" Click="BtnEmpty_Click"/>
+        <Button x:Name="Withdraw" Content="Hæv Penge" HorizontalAlignment="Left" Margin="171,336,0,0" VerticalAlignment="Top" Width="75" Height="48" Click="Withdraw_Click"/>
         <!--#endregion-->
 
     </Grid>

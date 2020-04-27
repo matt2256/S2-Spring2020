@@ -31,5 +31,51 @@ namespace WpfApp
             InitializeComponent();
             DataContext = _butik;
         }
+
+        #region Payment
+        private void BtnMoneyLeft_Click(object sender, RoutedEventArgs e)
+        {
+            _butik.InsertChange(5);
+        }
+
+        private void BtnMoneyCenter_Click(object sender, RoutedEventArgs e)
+        {
+            _butik.InsertChange(10);
+        }
+
+        private void BtnMoneyRight_Click(object sender, RoutedEventArgs e)
+        {
+            _butik.InsertChange(20);
+        }
+        #endregion
+
+        #region Mangement
+        private void BtnRefil_Click(object sender, RoutedEventArgs e)
+        {
+            _butik.Refill();
+        }
+
+        private void BtnEmpty_Click(object sender, RoutedEventArgs e)
+        {
+            _butik.Empty();
+        }
+
+        private void Withdraw_Click(object sender, RoutedEventArgs e)
+        {
+            _butik.CollectPayments();
+        }
+
+
+        #endregion
+
+        #region Betaling
+        private void Purchase_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            _butik.Purchase(button.DataContext);
+        }
+        #endregion
+
+
     }
 }
