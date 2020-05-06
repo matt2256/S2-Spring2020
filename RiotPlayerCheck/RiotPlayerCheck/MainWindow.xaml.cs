@@ -17,6 +17,9 @@ using System.Net;
 using Newtonsoft.Json;
 
 
+//Over ordnede ide
+//Vi lave en app der kan tage en summonername fra riot og vise hele summmonerens profil 
+
 namespace RiotPlayerCheck
 {
     /// <summary>
@@ -36,17 +39,15 @@ namespace RiotPlayerCheck
 
         }
 
-        //Over ordnede ide
-        //Vi lave en app der kan tage en summonername fra riot og vise hele summmonerens profil 
+
 
 
         //Næste ting der skal laves er:
         //1.Finde de api calls der skal bruges fra RIOT 
         //2.
 
-        
+       
 
-      
 
     }
 }

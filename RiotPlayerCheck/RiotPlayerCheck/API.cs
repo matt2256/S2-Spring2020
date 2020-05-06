@@ -13,13 +13,15 @@ namespace RiotPlayerCheck
     {
 
         #region Methoder
+
+        //PlayerCheck
         public static void PlayerNameCheck(string name)
         {
             using (WebClient web = new WebClient())
             {
                 var json = web.DownloadString(string.Format($"https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/{name}?api_key=RGAPI-49193e82-e6dc-4325-bb98-acfbc6aec99e"));
 
-                RiotInfo.Root output = JsonConvert.DeserializeObject<RiotInfo.Root>(json);
+                RiotInfo.RootSummonerInfo output = JsonConvert.DeserializeObject<RiotInfo.RootSummonerInfo>(json);
 
                 //Summoner name
                 string.Format($"{output.name}");
@@ -28,15 +30,23 @@ namespace RiotPlayerCheck
             }
         }
 
+        //PlayerID
         public static void PlayerId(string name)
         {
             using (WebClient web = new WebClient())
             {
                 var json = web.DownloadString(string.Format($"https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/{name}?api_key=RGAPI-49193e82-e6dc-4325-bb98-acfbc6aec99e"));
 
-                RiotInfo.Root output = JsonConvert.DeserializeObject<RiotInfo.Root>(json);
+                RiotInfo.RootSummonerInfo output = JsonConvert.DeserializeObject<RiotInfo.RootSummonerInfo>(json);
 
             }
+        }
+
+
+        //PlayerInformation
+        public static void PlayerInformation()
+        {
+
         }
         #endregion
     }
