@@ -62,6 +62,9 @@
     <Compile Include="Models\LeagueProfile.cs" />
     <Compile Include="Models\SummonerInfo.cs" />
     <Compile Include="RiotInfo.cs" />
+    <Compile Include="ObservableObjects.cs" />
+    <Compile Include="ViewModels\PlayerInformationModel.cs" />
+    <Compile Include="ViewModels\PlayerViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -102,8 +105,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RiotPlayerCheck.Models
+namespace RiotPlayerCheck
 {
     //Bruges til at lave en ny object profil
     public class LeagueProfile
