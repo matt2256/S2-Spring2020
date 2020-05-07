@@ -11,7 +11,7 @@ namespace RiotPlayerCheck
 {
     public class API
     {
-
+        
         #region Methoder
 
         //PlayerCheck
@@ -39,14 +39,26 @@ namespace RiotPlayerCheck
 
                 RiotInfo.RootSummonerInfo output = JsonConvert.DeserializeObject<RiotInfo.RootSummonerInfo>(json);
 
+                
             }
         }
 
+        
+
 
         //PlayerInformation
-        public static void PlayerInformation()
+        public static void PlayerInformation(string id)
         {
+            using (WebClient web = new WebClient())
+            {
+                var json = web.DownloadString(string.Format($"https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/{id}"));
 
+                RiotInfo.RootLeagueProfile output = JsonConvert.DeserializeObject<RiotInfo.RootLeagueProfile>(json);
+
+                MessageBox.Show(string.Format($"{output.tier}"));
+
+                
+            }
         }
         #endregion
     }
