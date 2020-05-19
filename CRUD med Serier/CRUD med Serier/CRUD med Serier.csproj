@@ -93,6 +93,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Serier.tt</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\ProductViewModel.cs" />
+    <Compile Include="ViewModel\SerierViewModel.cs" />
+    <Compile Include="ViewModel\Visuals.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
