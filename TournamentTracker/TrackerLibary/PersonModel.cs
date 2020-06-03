@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace TrackerLibary
 {
-    public class PersonModel
+    public class PersonModel : DbContext
     {
-        /// <summary>
-        /// Represent ID of each person
-        /// </summary>
+        [Key]
         public int ID { get; set; }
 
         /// <summary>
