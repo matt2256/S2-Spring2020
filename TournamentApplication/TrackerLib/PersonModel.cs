@@ -11,8 +11,19 @@ namespace TrackerLib
    public class PersonModel : Context
     {
         #region Fields
+        /// <summary>
+        /// Represents a non changeable variable for FirstName
+        /// </summary>
         private string _FirstName;
+
+        /// <summary>
+        /// Represent a non chageable variable for LastName
+        /// </summary>
         private string _LastName;
+
+        /// <summary>
+        /// Represent a non changeable variable for PlayerName
+        /// </summary>
         private string _InGameName;
         #endregion
 
@@ -83,7 +94,7 @@ namespace TrackerLib
                 }
                 catch (DbUpdateException e)
                 {
-                    Console.WriteLine($"Your Ingame name is longer than 50 characters.{e}");
+                    Console.WriteLine($"Your Ingame name is longer than 100 characters.{e}");
                     throw;
                 }
             } 
