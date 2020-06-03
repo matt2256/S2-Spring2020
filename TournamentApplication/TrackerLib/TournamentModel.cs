@@ -6,6 +6,7 @@ namespace TrackerLib
 {
     public class TournamentModel : Context
     {
+        #region Properties for TournamenModel
         /// <summary>
         /// Represent the ID of each Tournament
         /// </summary>
@@ -27,5 +28,6 @@ namespace TrackerLib
         /// to hold Rounds
         /// </summary>
         public List<List<MatchupModel>> Rounds { get; set; } = new List<List<MatchupModel>>();
+        #endregion
     }
 }

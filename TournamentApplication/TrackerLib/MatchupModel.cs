@@ -6,6 +6,7 @@ namespace TrackerLib
 {
     public class MatchupModel : Context
     {
+        #region Properties for MatchupModel
         /// <summary>
         /// Represent the ID of the Match
         /// </summary>
@@ -26,5 +27,6 @@ namespace TrackerLib
         /// Represents each matchup rounds
         /// </summary>
         public int MatchupRound { get; set; }
+        #endregion
     }
 }

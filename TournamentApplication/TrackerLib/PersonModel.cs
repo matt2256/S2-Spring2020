@@ -6,6 +6,7 @@ namespace TrackerLib
 {
    public class PersonModel : Context
     {
+        #region Properties for PersonModel
         /// <summary>
         /// Represent ID of each person
         /// </summary>
@@ -20,5 +21,6 @@ namespace TrackerLib
         /// Represent the last name of each Person
         /// </summary>
         public string LastName { get; set; }
+        #endregion
     }
 }

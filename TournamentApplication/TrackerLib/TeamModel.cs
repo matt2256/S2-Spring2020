@@ -6,6 +6,7 @@ namespace TrackerLib
 {
     public class TeamModel : Context
     {
+        #region Properties for TeamModel
         /// <summary>
         /// Represent the ID of each team
         /// </summary>
@@ -20,5 +21,6 @@ namespace TrackerLib
         /// Represent the the TeamName of each team
         /// </summary>
         public string TeamName { get; set; }
+        #endregion
     }
 }
