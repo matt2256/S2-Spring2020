@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Microsoft.EntityFrameworkCore;
 
-
-namespace TrackerLibary
+namespace TrackerLib
 {
-    public class PersonModel : Context
+   public class PersonModel : Context
     {
         /// <summary>
         /// Represent ID of each person

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TrackerLibary
+namespace TrackerLib
 {
     public class MatchupEntryModel : Context
     {
