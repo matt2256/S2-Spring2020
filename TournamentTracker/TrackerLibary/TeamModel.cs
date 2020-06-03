@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TrackerLibary
 {
-    class TeamModel
+    public class TeamModel
     {
         public int ID { get; set; }
         public List<PersonModel> TeamMembers { get; set; } = new List<PersonModel>();
