@@ -1,0 +1,20 @@
+1 . Adding fields to all classes 
+	Personmodel - done
+	TournamentModel - done
+	TeamModel - done
+	MatchupModel - done
+	MatchupEntryModel - done
+
+2. Adding DataAnnotations
+	PersonModel - done
+	TournamentModel - 
+	TeamModel - 
+	MatchupModel -
+	MatchupEntryModel - 
+
+3. Add try / catch to catch DbUpdateExeception
+	PersonModel - done
+	TournamentModel - 
+	TeamModel - 
+	MatchupModel -
+	MatchupEntryModel - 
