@@ -21,6 +21,9 @@ namespace TrackerLib
         /// Represent the the TeamName of each team
         /// </summary>
         public string TeamName { get; set; }
+
+        //Foreignkey
+        public int MyProperty { get; set; }
         #endregion
     }
 }
