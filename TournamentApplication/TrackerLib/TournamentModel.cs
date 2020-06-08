@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TrackerLib
 {
-    public class TournamentModel : Context
+    public class TournamentModel
     {
         #region Properties for TournamenModel
         /// <summary>

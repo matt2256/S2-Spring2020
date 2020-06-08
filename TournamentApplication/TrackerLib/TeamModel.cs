@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TrackerLib
 {
-    public class TeamModel : Context
+    public class TeamModel
     {
         #region Properties for TeamModel
         /// <summary>

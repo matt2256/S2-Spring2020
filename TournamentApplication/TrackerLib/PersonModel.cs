@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 namespace TrackerLib
 {
     [Table("People")]
-   public class PersonModel : Context
+   public class PersonModel
     {
         #region Fields
         private string _FirstName;

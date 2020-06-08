@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TrackerLib
 {
-    public class MatchupModel : Context
+    public class MatchupModel
     {
         #region Properties for MatchupModel
         /// <summary>
