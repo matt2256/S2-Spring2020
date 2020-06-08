@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackerLib", "TrackerLib\TrackerLib.csproj", "{443EE079-6E1A-4D09-BD84-F9EBF7DC7C05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModelTournament", "ViewModelTournament\ViewModelTournament.csproj", "{D21AD120-735B-4269-9E8D-FA74D66AF72C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{82C2D502-B8F8-40A2-BDCB-A8C77C38C4D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{443EE079-6E1A-4D09-BD84-F9EBF7DC7C05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{443EE079-6E1A-4D09-BD84-F9EBF7DC7C05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{443EE079-6E1A-4D09-BD84-F9EBF7DC7C05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D21AD120-735B-4269-9E8D-FA74D66AF72C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D21AD120-735B-4269-9E8D-FA74D66AF72C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D21AD120-735B-4269-9E8D-FA74D66AF72C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D21AD120-735B-4269-9E8D-FA74D66AF72C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82C2D502-B8F8-40A2-BDCB-A8C77C38C4D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82C2D502-B8F8-40A2-BDCB-A8C77C38C4D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82C2D502-B8F8-40A2-BDCB-A8C77C38C4D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82C2D502-B8F8-40A2-BDCB-A8C77C38C4D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

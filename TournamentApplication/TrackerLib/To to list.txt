@@ -28,3 +28,11 @@
 		TeamModel - 
 		MatchupModel - 
 		MatchupEntryModel - 
+
+5. Find out if [Required] cast any expections
+	if it does, then add try/catch to the project to catch it
+		PersonModel - done
+		TournamentModel - done
+		TeamModel - done
+		MatchupModel - done
+		MatchupEntryModel - done
