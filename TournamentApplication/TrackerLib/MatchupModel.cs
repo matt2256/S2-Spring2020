@@ -1,11 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace TrackerLib
 {
     public class MatchupModel
     {
+        #region Fields
+        /// <summary>
+        /// Represent a non changeable variable for MatchupRounds
+        /// </summary>
+        private int _MatchupRounds;
+        #endregion
+
         #region Properties for MatchupModel
         /// <summary>
         /// Represent the ID of the Match
@@ -26,7 +34,10 @@ namespace TrackerLib
         /// <summary>
         /// Represents each matchup rounds
         /// </summary>
-        public int MatchupRound { get; set; }
+        public int MatchupRound { 
+            get { return _MatchupRounds; } 
+            set { }
+        }
         #endregion
     }
 }

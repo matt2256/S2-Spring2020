@@ -6,6 +6,13 @@ namespace TrackerLib
 {
     public class TournamentModel
     {
+        #region Fields
+        /// <summary>
+        /// Represent a non changeable variable for TournamentName
+        /// </summary>
+        private string _TournamentName;
+        #endregion
+
         #region Properties for TournamenModel
         /// <summary>
         /// Represent the ID of each Tournament
@@ -15,7 +22,10 @@ namespace TrackerLib
         /// <summary>
         /// Represent the name of each tournament
         /// </summary>
-        public string TournamentName { get; set; }
+        public string TournamentName {
+            get { return _TournamentName; }
+            set { }
+        }
 
         /// <summary>
         /// Represnt a list of TeamModel of entered 

@@ -6,6 +6,13 @@ namespace TrackerLib
 {
     public class TeamModel
     {
+        #region Fields
+        /// <summary>
+        /// Represent a non changeable variable for TeamName
+        /// </summary>
+        private string _TeamName;
+        #endregion
+
         #region Properties for TeamModel
         /// <summary>
         /// Represent the ID of each team
@@ -20,9 +27,12 @@ namespace TrackerLib
         /// <summary>
         /// Represent the the TeamName of each team
         /// </summary>
-        public string TeamName { get; set; }
+        public string TeamName {
+            get { return _TeamName; }
+            set { } 
+        }
 
-        //Foreignkey
+        //Foreignkey - FOR LATER !!!!!!!!!
         public int MyProperty { get; set; }
         #endregion
     }
