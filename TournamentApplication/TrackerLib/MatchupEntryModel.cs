@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Transactions;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using Microsoft.EntityFrameworkCore;
+
+
 
 namespace TrackerLib
 {

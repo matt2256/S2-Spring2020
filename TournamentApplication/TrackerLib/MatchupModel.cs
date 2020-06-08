@@ -2,11 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text;
-using Microsoft.EntityFrameworkCore;
-using System.Windows;
-using Xceed.Wpf.Toolkit;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+
 
 namespace TrackerLib
 {

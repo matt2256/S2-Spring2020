@@ -3,16 +3,27 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using TrackerLib;
+using Microsoft.EntityFrameworkCore.
 
 namespace ViewModelTournament
 {
+
+    
     class ViewModelTournamentContext : DbContext
     {
         /// <summary>
         /// Represent a empty constructor
         /// </summary>
-        public ViewModelTournamentContext(){}
+        public ViewModelTournamentContext() : base()
+        {
+        }
 
+        #region OnModelCreating
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+
+        }
+        #endregion
 
         #region dbset properties 
         /// <summary>
@@ -41,6 +52,6 @@ namespace ViewModelTournament
         public DbSet<TournamentModel> Tournament { get; set; }
         #endregion
 
-
+       
     }
 }
