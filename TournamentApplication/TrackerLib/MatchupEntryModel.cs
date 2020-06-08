@@ -21,8 +21,6 @@ namespace TrackerLib
         /// <summary>
         /// Represent the ID for one team in the matchup
         /// </summary>
-        [Key]
-        [Column("Id")]
         public int ID { get; set; }
 
         /// <summary>
@@ -33,9 +31,6 @@ namespace TrackerLib
         /// <summary>
         /// Represent the score of this team
         /// </summary>
-        [MaxLength(500)]
-        [Column("Score")]
-        [Required]
         public double Score {
             get { return _Score; }
             set 
