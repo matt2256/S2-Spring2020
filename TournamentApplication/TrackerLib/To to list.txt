@@ -19,20 +19,13 @@
 	MatchupModel - done
 	MatchupEntryModel - done
 
-4. Adding DataAnnotations - Foreign keys 
-	Finding out how to do it 
-	Test it a new test project
-	Adding it to this project
-		PersonModel - 
-		TournamentModel -
-		TeamModel - 
-		MatchupModel - 
-		MatchupEntryModel - 
+4. Remove DataAnnotations  
+	PersonModel - 
+	TournamentModel - 
+	TeamModel - 
+	MatchupModel - 
+	MatchupEntryModel - 
 
-5. Find out if [Required] cast any expections
-	if it does, then add try/catch to the project to catch it
-		PersonModel - done
-		TournamentModel - done
-		TeamModel - done
-		MatchupModel - done
-		MatchupEntryModel - done
+5. Update ViewModelContext to include OnModelCreating to use Fluent API 
+	
+
