@@ -5,19 +5,19 @@
 	MatchupModel - done
 	MatchupEntryModel - done
 
-2. Adding DataAnnotations
+2. Adding DataAnnotations - still missing foreign keys!!
 	PersonModel - done
 	TournamentModel - 
-	TeamModel - 
+	TeamModel - done
 	MatchupModel - done
-	MatchupEntryModel - 
+	MatchupEntryModel - done
 
 3. Add try / catch to catch DbUpdateExeception
 	PersonModel - done
 	TournamentModel - 
-	TeamModel - 
+	TeamModel - done
 	MatchupModel - done
-	MatchupEntryModel - 
+	MatchupEntryModel - done
 
 
 

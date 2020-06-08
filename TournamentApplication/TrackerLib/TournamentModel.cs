@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace TrackerLib
 {
@@ -17,14 +20,30 @@ namespace TrackerLib
         /// <summary>
         /// Represent the ID of each Tournament
         /// </summary>
+        [Key]
+        [Column("Id")]
         public int ID { get; set; }
 
         /// <summary>
         /// Represent the name of each tournament
         /// </summary>
+        [MaxLength(100)]
+        [Column("Tournament Name")]
+        [Required]
         public string TournamentName {
             get { return _TournamentName; }
-            set { }
+            set 
+            {
+                try
+                {
+
+                }
+                catch (DbUpdateException e)
+                {
+                    Console.WriteLine($"The input is higher than 100 characters. {e}");
+                    throw;
+                }
+            }
         }
 
         /// <summary>
