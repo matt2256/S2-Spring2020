@@ -9,12 +9,16 @@
 	PersonModel - done
 	TournamentModel - 
 	TeamModel - 
-	MatchupModel -
+	MatchupModel - done
 	MatchupEntryModel - 
 
 3. Add try / catch to catch DbUpdateExeception
 	PersonModel - done
 	TournamentModel - 
 	TeamModel - 
-	MatchupModel -
+	MatchupModel - done
 	MatchupEntryModel - 
+
+
+
+	MatchupModel - done (try/catch and data annotations)

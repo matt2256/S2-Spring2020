@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
+using System.Windows;
+using Xceed.Wpf.Toolkit;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TrackerLib
 {
@@ -34,9 +39,22 @@ namespace TrackerLib
         /// <summary>
         /// Represents each matchup rounds
         /// </summary>
+        [MaxLength(10)]
+        [Column("Rounds")]
         public int MatchupRound { 
             get { return _MatchupRounds; } 
-            set { }
+            set 
+            {
+                try
+                {
+
+                }
+                catch (DbUpdateException e)
+                {
+                    Console.WriteLine($"The number of rounds is higher than 10.{e}");
+                    throw;
+                }
+            }
         }
         #endregion
     }
