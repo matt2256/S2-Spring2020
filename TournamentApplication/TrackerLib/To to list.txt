@@ -20,12 +20,12 @@
 	MatchupEntryModel - done
 
 4. Remove DataAnnotations  
-	PersonModel - 
-	TournamentModel - 
-	TeamModel - 
-	MatchupModel - 
-	MatchupEntryModel - 
+	PersonModel - done
+	TournamentModel - done
+	TeamModel - done
+	MatchupModel - done
+	MatchupEntryModel - done 
 
-5. Update ViewModelContext to include OnModelCreating to use Fluent API 
+5. Update ViewModelContext to include OnModelCreating to use Fluent API - done 
 	
 
