@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 
 namespace TrackerLib
 {
@@ -17,6 +20,8 @@ namespace TrackerLib
         /// <summary>
         /// Represent the ID of each team
         /// </summary>
+        [Key]
+        [Column("Id")]
         public int ID { get; set; }
 
         /// <summary>
@@ -27,9 +32,23 @@ namespace TrackerLib
         /// <summary>
         /// Represent the the TeamName of each team
         /// </summary>
+        [MaxLength(50)]
+        [Column("Team Name")]
+        [Required]
         public string TeamName {
             get { return _TeamName; }
-            set { } 
+            set 
+            {
+                try
+                {
+
+                }
+                catch (DbUpdateException e)
+                {
+                    Console.WriteLine($"The input is higher than 50 characters. {e}");
+                    throw;
+                }
+            } 
         }
 
         //Foreignkey - FOR LATER !!!!!!!!!
