@@ -39,8 +39,6 @@ namespace TrackerLib
         /// <summary>
         /// Represents each matchup rounds
         /// </summary>
-        [MaxLength(10)]
-        [Column("Rounds")]
         public int MatchupRound { 
             get { return _MatchupRounds; } 
             set 
