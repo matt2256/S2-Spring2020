@@ -31,16 +31,11 @@ namespace TrackerLib
         /// <summary>
         /// Represent ID of this person
         /// </summary>
-        [Key]
-        [Column("Id")]
         public int ID { get; set; }
 
         /// <summary>
         /// Represent the first name of this Person
         /// </summary>
-        [MaxLength(20)]
-        [Column("First Name")]
-        [Required]
         public String FirstName
         {
             get { return _FirstName; }
@@ -60,8 +55,6 @@ namespace TrackerLib
         /// <summary>
         /// Represent the last name of this Person
         /// </summary>
-        [MaxLength(50)]
-        [Column("Last Name")]
         public string LastName { 
             get { return _LastName; }
             set 
@@ -81,9 +74,6 @@ namespace TrackerLib
         /// <summary>
         /// Represent the in game of this person
         /// </summary>
-        [MaxLength(100)]
-        [Column("In game name")]
-        [Required]
         public string PlayerName {
             get { return _InGameName; }
             set
