@@ -20,8 +20,6 @@ namespace TrackerLib
         /// <summary>
         /// Represent the ID of each team
         /// </summary>
-        [Key]
-        [Column("Id")]
         public int ID { get; set; }
 
         /// <summary>
@@ -32,9 +30,6 @@ namespace TrackerLib
         /// <summary>
         /// Represent the the TeamName of each team
         /// </summary>
-        [MaxLength(50)]
-        [Column("Team Name")]
-        [Required]
         public string TeamName {
             get { return _TeamName; }
             set 
