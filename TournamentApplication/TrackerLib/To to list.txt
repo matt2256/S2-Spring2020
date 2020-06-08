@@ -27,5 +27,32 @@
 	MatchupEntryModel - done 
 
 5. Update ViewModelContext to include OnModelCreating to use Fluent API - done 
+
+6. Configure MatchupEntry column
+	ID
+		HasColumnName()
+		Property()
+		HasColumn(0)
+		HasColumnType("int")
+	Team One
+		HasColumnName()
+		Property()
+		HasColumn(1)
+	Team Two
+		HasColumnName()
+		Property()
+		HasColumn(2)
+	Score 
+		HasColumnName()
+		Property()
+		Hascolumn(3)
+		HasColumnType("string")
+
+7. Configure Matchup column
+
+8. Configure Person column
+
+9. Configure Tournament column
+
 	
 
